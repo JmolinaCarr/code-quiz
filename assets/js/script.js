@@ -50,7 +50,7 @@ var questions = [
             C: "attach",
             D: "None of the above",
         },
-        correctAnswer: "B"
+        correctAnswer: ""
     }
 
 ]
@@ -88,11 +88,7 @@ var message = "Time is up!";
 function countdown() {
     var timeLeft = 30;
 
-// Displays the message one word at a time
-function displayMessage() {
-  var wordCount = 0;
 
-  // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var msgInterval = setInterval(function () {
     // If there are no more words left in the message
     if (words[wordCount] === undefined) {

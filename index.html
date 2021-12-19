@@ -11,15 +11,21 @@
     <body>
         <header id="header">
             <h4 id="view-high-scores">View High Scores</h4>
-            <H4 id="timer">Time: <span id="countdown"></span></H4>
+            <H4 id="timer" color: black;>Time: <span id="countdown"></span></H4>
         </header>
     
 
         <div class="main-container">
-            <h1>Code Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit!</p>
-            <p>Keep in mind that incorrect answers will penalize our score/time by ten seconds.</p>
-            <button class="button" id="start-quiz">Start Quiz</button>
+            <div class="container start">
+                <h1>Code Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit!</p>
+                <p>Keep in mind that incorrect answers will penalize our score/time by ten seconds.</p>
+                <button class="button" id="start-quiz">Start Quiz</button>
+            </div>
+        </div>
+
+        <div id="question-container" class="hidden">
+
         </div>
 
     <script src="assets/js/script.js"></script>

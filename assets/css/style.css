@@ -7,9 +7,17 @@ header {
     
 }
 
+#view-high-scores {
+    color: magenta;
+}
 .main-container h1, p {
     text-align: center;
 }
+
 .button {
-    align-items: center;
+    background-color: #6432a8;
+    color: white;
+}
+.button:hover {
+    background-color:magenta;
 }
