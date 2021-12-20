@@ -12,11 +12,15 @@ header {
 }
 .main-container h1, p {
     text-align: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
 }
 
 .button {
     background-color: #6432a8;
     color: white;
+    align-items: center;
 }
 .button:hover {
     background-color:magenta;

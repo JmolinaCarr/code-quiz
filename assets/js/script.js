@@ -1,5 +1,5 @@
 var timerEl = document.getElementById('countdown')
-var timeLeft = 60;
+var timeLeft = 30;
 var score = 0;
 var questions = [
     {
@@ -50,27 +50,18 @@ var questions = [
             C: "attach",
             D: "None of the above",
         },
-        correctAnswer: ""
+        correctAnswer: "B"
     }
 
 ]
 
-var mainEl = document.getElementById('main');
+document.getElementById*("start-quiz").addEventListener("click", startGame, false);
+    function startGame() {};
 
-var message = "Time is up!";
-
-
-
-  // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-  var timeInterval = setInterval(function () {
+    var timeInterval = setInterval(function () {
     // As long as the `timeLeft` is greater than 1
     if (timeLeft > 1) {
       // Set the `textContent` of `timerEl` to show the remaining seconds
-      timerEl.textContent = timeLeft;
-      // Decrement `timeLeft` by 1
-      timeLeft--;
-    } else if (timeLeft === 1) {
-      // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
       timerEl.textContent = timeLeft;
       timeLeft--;
     } else {
@@ -82,24 +73,22 @@ var message = "Time is up!";
       displayMessage();
     }
   }, 1000);
-}
+
 
 // Timer that counts down from 30
 function countdown() {
     var timeLeft = 30;
+//message display when time is out
+var displayMessage = "Time is up!";
 
-
-  var msgInterval = setInterval(function () {
-    // If there are no more words left in the message
-    if (words[wordCount] === undefined) {
-      // Use `clearInterval()` to stop the timer
-      clearInterval(msgInterval);
-    } else {
-      // Display one word of the message
-      mainEl.textContent = words[wordCount];
-      wordCount++;
-    }
-  }, 1000);
 }
 
 countdown();
+
+
+//onClick on the startButton start quiz and timer coundown 60 seconds.
+//answer first question correct get 5 pts
+//if answer question reduce 5 second from current time.
+// if time runs out message "time is up? 
+//else continue answering questions"
+//once time has run out ask for initials and add them to the high score stored in local storage.
